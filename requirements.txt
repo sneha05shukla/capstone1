@@ -11,3 +11,4 @@ pytest
 mlflow
 azure-ai-ml
 azure-identity
+httpx
