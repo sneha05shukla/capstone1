@@ -18,19 +18,18 @@ def health():
 def predict():
 
     sample_data = pd.DataFrame({
-        "step": [1],
-        "amount": [1000],
-        "oldbalanceOrg": [5000],
-        "newbalanceOrig": [4000],
-        "oldbalanceDest": [0],
-        "newbalanceDest": [1000],
-        "isFlaggedFraud": [0],
-        "type_CASH_OUT": [0],
-        "type_DEBIT": [0],
-        "type_PAYMENT": [1],
-        "type_TRANSFER": [0]
-    })
-
+    "step": [1],
+    "amount": [1000000],
+    "oldbalanceOrg": [1000000],
+    "newbalanceOrig": [0],
+    "oldbalanceDest": [0],
+    "newbalanceDest": [0],
+    "isFlaggedFraud": [1],
+    "type_CASH_OUT": [0],
+    "type_DEBIT": [0],
+    "type_PAYMENT": [0],
+    "type_TRANSFER": [1]
+})
     prediction = model.predict(sample_data)
 
-    return {"prediction": int(prediction[0])}
+    return {"prediction": int(prediction[1])}
