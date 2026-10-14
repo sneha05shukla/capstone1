@@ -32,4 +32,4 @@ def predict():
 })
     prediction = model.predict(sample_data)
 
-    return {"prediction": int(prediction[1])}
+    return {"prediction": int(prediction[0])}
